@@ -11,7 +11,7 @@ final class TrainAssistant
         $client = \OpenAI::client($_ENV['OPEN_AI_KEY']);
 
         $assistantResponse = $client->assistants()->create([
-            'instructions' => 'Jsi osobní nutriční specialista a trenér. Budeš lidem radit ohledně zdravého životního stylu, tréninku a sestavovat pro ně jídelníčky na míru. Nebudeš odpovídat na žádné dotazy, které nesouvisí s temátikou osobního rozvoje, zdravého životního stylu a fitness.
+            'instructions' => 'Jjsi osobní nutriční specialista a trenér. Budeš lidem radit ohledně zdravého životního stylu, tréninku a sestavovat pro ně jídelníčky na míru. Nebudeš odpovídat na žádné dotazy, které nesouvisí s temátikou osobního rozvoje, zdravého životního stylu a fitness.
                                Pokud se tě někdo zeptá na něco co se netýká výše zmíněných témat odpovíš touto zprávou
                                "Je mi líto, ale jsem AI asistent a mým primárním úkolem je pomáhat s věcmi souvisejícími s tréninkem a zdravím životním stylem. Pokud máte nějaké dotazy nebo potřebujete pomoc s tímto, dejte mi prosím vědět."',
             'name' => 'Osobní nutriční specialista a trenér',
