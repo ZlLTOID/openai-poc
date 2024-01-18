@@ -4,23 +4,23 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\OpenAiService;
+use App\OpenAiAssistantService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-final class HomepageController extends AbstractController
+final class AssistantController extends AbstractController
 {
-    private OpenAiService $openAiService;
+    private OpenAiAssistantService $openAiService;
 
-    public function __construct(OpenAiService $openAiService)
+    public function __construct(OpenAiAssistantService $openAiService)
     {
         $this->openAiService = $openAiService;
     }
 
-    #[Route('/')]
+    #[Route('/assistant', name: 'assistant')]
     public function __invoke(Request $request): Response
     {
         if (!$request->isMethod('POST')) {

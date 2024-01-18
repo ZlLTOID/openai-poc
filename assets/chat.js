@@ -13,7 +13,7 @@ function sendMessage() {
         displayMessage(message, true);
 
         // Send the message to the API endpoint (replace 'your-api-endpoint' with the actual endpoint)
-        const apiUrl = "http://localhost:88/";
+        const apiUrl = "http://localhost:88/completion";
         // You can use fetch or any other method to send the message to the server
         // Example using fetch:
         fetch(apiUrl, {
